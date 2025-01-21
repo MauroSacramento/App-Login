@@ -1,0 +1,74 @@
+@use '../../../styles/variables' as *;
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+
+    .form-section {
+        flex-grow: 0.4;
+        padding: 0 35px;
+
+        h2 {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 45px;
+        }
+        img {
+            margin-bottom: 30px;
+        }
+
+        .btn-wrapper{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            gap: 30px;
+
+            button {
+                width: 100%;
+                font-weight: 500;
+                font-size: 16px;
+                border-radius: 8px;
+                border: none;
+                background-color: transparent;
+                cursor: pointer;
+                padding: 12px 24px;
+    
+                &.btn-login{
+                    background-color: $primary-color;
+                    color: white;
+                }
+    
+                &.btn-signUp{
+                    border: 1px solid $primary-color;
+                    color: $primary-color;
+                }
+            }
+        }
+
+    }
+
+    .main-section{
+        
+        flex-grow: 1;
+        gap: 1rem;
+
+        height: 100vh;
+        background-color: $gray-bg;
+        h2{
+            margin-top: 2rem;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    }
+}
