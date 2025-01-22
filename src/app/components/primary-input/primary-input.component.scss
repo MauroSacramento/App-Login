@@ -1,0 +1,39 @@
+@use '../../../styles/variables' as *;
+
+.input-wrapper {
+    text-align: initial;
+
+    label {
+        display: block;
+        margin-bottom: 8px;
+        color: $text-color;
+        font-weight: 400;
+        font-size: 14px;
+        font-family: Poppins, sans-serif;
+    }
+    
+    .input-content {
+        width: 100%;
+        display: flex;
+
+        .icon {
+            padding: 12px;
+            background-color: $primary-color;
+            border-top-right-radius: 8px;
+            border-bottom-right-radius: 8px;
+
+            img {
+                height: 20px;
+            }
+        }
+
+        input {
+            border-radius: 8px 0 0 8px;
+            background-color:$gray-secondary-bg ;
+            width: 100%;
+            border: none;
+            padding: 12px 0 12px 20px;
+            color: $text-color;
+        }
+    }
+}

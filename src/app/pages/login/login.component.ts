@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { DefaultLoginComponent } from "../../components/default-login/default-login.component";
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { PrimaryInputComponent } from "../../components/primary-input/primary-input.component";
 
 @Component({
   selector: 'app-login',
-  imports: [DefaultLoginComponent],
+  imports: [DefaultLoginComponent, PrimaryInputComponent],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss'
 })
