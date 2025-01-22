@@ -3,18 +3,28 @@
         <img src="/svg/logo.svg" alt="logotipo">
         <h2>Welcome</h2>
 
+        <ng-content></ng-content>
+
         <div class="btn-wrapper">
             <button class="btn-login">Login Now</button>
-        <div>
-            <span>or</span>
-        </div>
-        <button class="btn-signUp">Signup Now</button>
+        
+            <div class="divider">
+                <div></div>
+               
+                <span>or</span>
+                
+                <div></div>
+            </div>
+
+            <button class="btn-signUp">Signup Now</button>
         </div>
         
     </section>
 
     <section class="main-section">
-        <h2>You should, Move it</h2>
-        <img src="/svg/main-illustration.svg" alt="Garoto no skate">
+        <div class="container">
+            <h2>You should, Move it</h2>
+            <img src="/svg/main-illustration.svg" alt="Garoto no skate">
+        </div>
     </section>
 </main>
