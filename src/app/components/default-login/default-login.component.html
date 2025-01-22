@@ -6,7 +6,7 @@
         <ng-content></ng-content>
 
         <div class="btn-wrapper">
-            <button class="btn-login">{{ primaryBtnText }}</button>
+            <button class="btn-login" (click)="onSubmit()">{{ primaryBtnText }}</button>
         
             <div class="divider">
                 <div></div>
@@ -16,7 +16,7 @@
                 <div></div>
             </div>
 
-            <button class="btn-signUp">{{ secondaryBtnText }}</button>
+            <button class="btn-signUp" (click)="onNavigate()">{{ secondaryBtnText }}</button>
         </div>
         
     </section>

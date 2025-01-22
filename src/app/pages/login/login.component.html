@@ -2,9 +2,11 @@
 title="Login into your account"
 primaryBtnText="Login Now"
 secondaryBtnText="Signup Now"
+(submit)="onSubmit()"
+(navigate)="onNavigate()"
 >
 
-    <form formGroup="loginForm">
+    <form [formGroup]="loginForm">
         <app-primary-input label="Email Address" type="email" placeholder="name@email.com" inputName="email" formControlName="email">
             <img src="/svg/email-icon.svg" alt="icon-email">
         </app-primary-input>
