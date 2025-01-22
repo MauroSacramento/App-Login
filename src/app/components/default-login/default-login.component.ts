@@ -7,7 +7,7 @@ import { Component, Input } from '@angular/core';
   styleUrl: './default-login.component.scss'
 })
 export class DefaultLoginComponent {
-  // @Input() title: string = "";
-  // @Input() primaryBtnText: string = "";
-  // @Input() secondaryBtnText: string = "";
+  @Input() title!: string;
+  @Input() primaryBtnText: string = "";
+  @Input() secondaryBtnText: string = "";
 }

@@ -1,12 +1,12 @@
 <main>
     <section class="form-section">
         <img src="/svg/logo.svg" alt="logotipo">
-        <h2>Welcome</h2>
+        <h2>{{ title }}</h2>
 
         <ng-content></ng-content>
 
         <div class="btn-wrapper">
-            <button class="btn-login">Login Now</button>
+            <button class="btn-login">{{ primaryBtnText }}</button>
         
             <div class="divider">
                 <div></div>
@@ -16,7 +16,7 @@
                 <div></div>
             </div>
 
-            <button class="btn-signUp">Signup Now</button>
+            <button class="btn-signUp">{{ secondaryBtnText }}</button>
         </div>
         
     </section>
