@@ -1,5 +1,5 @@
-<app-default-login title="Sign in and start today!" primaryBtnText="Sign up" secondaryBtnText="Login now" [disabledBtnPrimary]="true">
-    <form [formGroup]="signupForm">
+<app-default-login title="Sign in and start today!" primaryBtnText="Sign up" secondaryBtnText="Login now" [disabledBtnPrimary]="!signupForm.valid" (submit)="onSignUp()">
+    <form [formGroup]="signupForm" (ngSubmit)="onSignUp()">
 
         <app-primary-input 
         [control]="signupForm.controls.name" 
@@ -39,6 +39,7 @@
         >
         <img src="/svg/password-icon.svg" alt="password">
     </app-primary-input>
+
     <span>Forget password</span>
     </form>
 </app-default-login>
