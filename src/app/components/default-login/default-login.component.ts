@@ -13,6 +13,7 @@ export class DefaultLoginComponent {
 
   @Output() submit = new EventEmitter();
   @Output() navigate = new EventEmitter();
+  @Input({required:true}) disabledBtnPrimary!: boolean;
 
 
   onSubmit(){

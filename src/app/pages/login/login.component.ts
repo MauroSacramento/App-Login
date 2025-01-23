@@ -4,6 +4,7 @@ import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angula
 import { PrimaryInputComponent } from "../../components/primary-input/primary-input.component";
 import { Router } from '@angular/router';
 import { LoginService } from '../../services/login.service';
+import { ToastrService } from 'ngx-toastr';
 
 interface LoginForm {
   email: FormControl,
@@ -12,6 +13,7 @@ interface LoginForm {
 
 @Component({
   selector: 'app-login',
+  standalone: true,
   imports: [DefaultLoginComponent, PrimaryInputComponent, ReactiveFormsModule],
   providers: [LoginService],
   templateUrl: './login.component.html',
@@ -20,6 +22,7 @@ interface LoginForm {
 export class LoginComponent {
   loginForm: FormGroup<LoginForm>;
   private loginService = inject(LoginService);
+  private toastrService = inject(ToastrService);
 
   constructor(private router: Router){
     
@@ -31,8 +34,8 @@ export class LoginComponent {
 
   onSubmit(){
     this.loginService.login(this.loginForm.value.email, this.loginForm.value.password).subscribe({
-      next: () => console.log("Sucesso"),
-      error: () => console.log("Error")
+      next: () => this.toastrService.success("Login foi feito com sucesso"),
+      error: () => this.toastrService.error("Houve um erro no login")
     })
   }
 

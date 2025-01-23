@@ -4,14 +4,15 @@ primaryBtnText="Login Now"
 secondaryBtnText="Signup Now"
 (submit)="onSubmit()"
 (navigate)="onNavigate()"
+[disabledBtnPrimary]="!loginForm.valid"
 >
 
     <form [formGroup]="loginForm">
-        <app-primary-input label="Email Address" type="email" placeholder="name@email.com" inputName="email" formControlName="email">
+        <app-primary-input label="Email Address" type="email" placeholder="name@email.com" inputName="email" [control]="loginForm.controls.email">
             <img src="/svg/email-icon.svg" alt="icon-email">
         </app-primary-input>
 
-        <app-primary-input label="Password" type="password" placeholder="Enter your password" inputName="password" formControlName="password">
+        <app-primary-input label="Password" type="password" placeholder="Enter your password" inputName="password" [control]="loginForm.controls.password">
             <img src="/svg/password-icon.svg" alt="lock-icon">
         </app-primary-input>
         <span>Forget password</span>
